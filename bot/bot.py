@@ -31,9 +31,9 @@ class Sexybabeycord(commands.Bot):
     def __init__(self, mongo_client, *args, **kwargs):
         """Initialize the bot class"""
 
-        if mongo_client is not None:
-            self.mongo_client = mongo_client
-            self.database = self.mongo_client.get_database(constants.Database.database)
+#        if mongo_client is not None:
+#            self.mongo_client = mongo_client
+#            self.database = self.mongo_client.get_database(constants.Database.database)
         super().__init__(*args, **kwargs)
 
     async def sync_app_commands(self) -> None:

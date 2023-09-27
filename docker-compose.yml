@@ -1,0 +1,16 @@
+version: "3"
+services:
+  vbot:
+    restart: unless-stopped
+    build: .
+    container_name: vbot
+    volumes:
+      - "./grafana-data/:/var/lib/grafana"
+    env_file:
+      - "./.env"
+#  mongo:
+#    image: mongo:4.4.24
+#    restart: unless-stopped
+#    environment:
+#      MONGO_INITDB_ROOT_USERNAME: vbot
+#      MONGO_INITDB_ROOT_PASSWORD: ad4e00678cc0ac5eb3f76609ea69cf236a3ac0f5b9a5c2b78904bdaae3040cb0

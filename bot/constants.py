@@ -18,7 +18,7 @@ class _Bot:
         id = 1137764471725625354
     else:
         token = os.getenv("DISCORD_TOKEN")
-        id = 873414777064542268
+        id = os.getenv("DISCORD_ID")
     tenor = os.getenv("TENOR_TOKEN")
     file_cache = "bot/resources/file_cache/"
 
@@ -41,10 +41,10 @@ class _Channels:
         thots = 1137763783037685820
         fate = 1137763793364074556
     else:
-        yachts = 644752766736138241
-        bots = 644753024287506452
-        thots = 644753035993677831
-        fate = 1021214119141064755
+        yachts = os.getenv("CHANNEL")
+        bots = os.getenv("CHANNEL")
+        thots = os.getenv("CHANNEL")
+        fate = os.getenv("CHANNEL")
 
 
 Channels = _Channels()
@@ -54,7 +54,7 @@ class _Guild:
     if Bot.testing:
         id = 740341628694298778
     else:
-        id = 644752766241341460
+        id = os.getenv("GUILD")
 
 
 Guild = _Guild()
